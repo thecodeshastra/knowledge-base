@@ -1,0 +1,17 @@
+version: "3.9"
+
+services:
+  docusaurus:
+    image: ${PROJECT_NAME}-kb
+    container_name: ${PROJECT_NAME}-kb
+    env_file:
+      - ../.env
+    build:
+      context: ../site
+      dockerfile: ../docker/DockerFile
+    ports:
+      - "${FORNTEND_PORT}:3000"
+    volumes:
+      - ../docs:/app/docs # <-- your notes mounted here
+    environment:
+      - NODE_ENV=${NODE_ENV}

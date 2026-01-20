@@ -1,0 +1,5 @@
+# Default docker-compose.yml - points to development setup
+# Run with: docker-compose up
+
+include:
+  - docker/docker-compose-prod.yml

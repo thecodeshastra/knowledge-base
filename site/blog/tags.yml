@@ -1,0 +1,14 @@
+general:
+  label: General
+  permalink: /general
+  description: General technical discussions.
+
+technical:
+  label: Technical
+  permalink: /technical
+  description: Deep dives into specific technologies.
+
+notes:
+  label: Notes
+  permalink: /notes
+  description: Quick notes and learning snippets.
