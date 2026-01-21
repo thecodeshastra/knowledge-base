@@ -16,7 +16,7 @@ __pycache__
 *$py.class
 
 # Production
-/build
+**/build/
 
 # Generated files
 .docusaurus
