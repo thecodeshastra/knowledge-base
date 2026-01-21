@@ -794,6 +794,6 @@ git push origin <branch> -f
 
 ## Resources
 
-- **Official Git Book**: <https://git-scm.com/book/en/v2>
-- **Interactive Learning**: <https://learngitbranching.js.org>
-- **Git Docs**: <https://git-scm.com/learn>
+- [Official Git Book](https://git-scm.com/book/en/v2)
+- [Interactive Learning](https://learngitbranching.js.org)
+- [Git Docs](https://git-scm.com/learn)
