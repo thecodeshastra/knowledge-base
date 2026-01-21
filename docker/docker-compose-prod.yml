@@ -12,6 +12,6 @@ services:
     ports:
       - "${FORNTEND_PORT}:3000"
     volumes:
-      - ../docs:/app/docs # <-- your notes mounted here
+      - ../docs:/docs # <-- mapped to /docs to match relative path ../docs from /app/site
     environment:
       - NODE_ENV=${NODE_ENV}
