@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xsl" href="atom.xsl"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://thecodeshastra.github.io/knowledge-base/blog</id>
+    <title>Knowledge Base Blog</title>
+    <updated>2026-01-21T17:41:11.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://thecodeshastra.github.io/knowledge-base/blog"/>
+    <subtitle>Knowledge Base Blog</subtitle>
+    <icon>https://thecodeshastra.github.io/knowledge-base/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[Blog Template]]></title>
+        <id>https://thecodeshastra.github.io/knowledge-base/blog/template</id>
+        <link href="https://thecodeshastra.github.io/knowledge-base/blog/template"/>
+        <updated>2026-01-21T17:41:11.000Z</updated>
+        <summary type="html"><![CDATA[Welcome to the blog. This is a template for future technical posts.]]></summary>
+        <content type="html"><![CDATA[<p>Welcome to the blog. This is a template for future technical posts.</p>
+<p>I don't have immediate plans to update the blog frequently, but I'll use this space to share major technical milestones or deep dives that don't fit directly into the documentation structure.</p>
+<p>Stay tuned for more updates!</p>]]></content>
+        <author>
+            <name>Mahendra Pawar</name>
+            <uri>https://github.com/thecodeshastra</uri>
+        </author>
+        <category label="General" term="General"/>
+        <category label="Technical" term="Technical"/>
+    </entry>
+</feed>

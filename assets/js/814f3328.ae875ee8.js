@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunksite=globalThis.webpackChunksite||[]).push([[7472],{5513(e){e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"Blog Template","permalink":"/knowledge-base/blog/template","unlisted":false,"date":"2026-01-21T17:41:11.000Z"}]}')}}]);
