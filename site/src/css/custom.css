@@ -1,66 +1,146 @@
 /**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
+ * Custom CSS for Knowledge Base
  */
 
-/* You can override the default Infima variables here. */
 :root {
   --ifm-color-primary: #34495e;
-  /* Sleek Slate Blue/Grey */
   --ifm-color-primary-dark: #2c3e50;
   --ifm-color-primary-darker: #283747;
   --ifm-color-primary-darkest: #1b2631;
   --ifm-color-primary-light: #5d6d7e;
   --ifm-color-primary-lighter: #85929e;
   --ifm-color-primary-lightest: #aeb6bf;
-  --ifm-code-font-size: 95%;
-  --ifm-font-family-base: 'Inter', system-ui, -apple-system, sans-serif;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
   --ifm-navbar-background-color: #ffffff;
 }
 
-/* Dark Mode Overrides */
 [data-theme='dark'] {
   --ifm-color-primary: #ecf0f1;
-  --ifm-color-primary-dark: #bdc3c7;
-  --ifm-color-primary-darker: #95a5a6;
-  --ifm-color-primary-darkest: #7f8c8d;
-  --ifm-color-primary-light: #ffffff;
-  --ifm-color-primary-lighter: #ffffff;
-  --ifm-color-primary-lightest: #ffffff;
   --ifm-background-color: #1b1b1f;
-  /* Dark Grey */
   --ifm-navbar-background-color: #242429;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
 .hero--dark {
-  background-color: #242429;
+  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
   color: #f8fafc;
-}
-
-.border--top {
-  border-top: 1px solid var(--ifm-color-emphasis-200);
+  padding: 6rem 0;
 }
 
 .hero__title {
-  font-weight: 700;
-  letter-spacing: -0.025em;
+  font-weight: 800;
+  font-size: 3.5rem;
 }
 
-.hero__subtitle {
-  font-weight: 400;
-  opacity: 0.9;
-  max-width: 600px;
-  margin: 0 auto 2rem;
+.card-fancy {
+  border: 1px solid var(--ifm-color-emphasis-200);
+  transition: all 0.3s ease;
+  background-color: var(--ifm-background-color);
+  border-radius: 12px;
 }
 
-h2,
-h3 {
-  color: var(--ifm-color-primary);
+.card-fancy:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px -10px rgba(0, 0, 0, 0.2);
 }
 
-li {
-  margin-bottom: 0.5rem;
+/* --- Centered Search Bar UI --- */
+
+/* 1. Ensure Navbar items take full width to allow centering */
+.navbar__items {
+  flex: 1;
+}
+
+/* 2. Hide search by default everywhere */
+.navbar__search {
+  display: none !important;
+}
+
+/* 3. Restricted Visibility: Only Documentation Pages */
+html[class*='plugin-docs'] .navbar__search {
+  display: flex !important;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  /* Wider, centered bar */
+}
+
+/* 4. Center-aligned search input style */
+.navbar__search-input {
+  width: 100% !important;
+  border-radius: 20px !important;
+  background-color: var(--ifm-color-emphasis-100) !important;
+  border: 1px solid var(--ifm-color-emphasis-300) !important;
+  padding: 8px 16px 8px 36px !important;
+  font-size: 0.95rem !important;
+  transition: all 0.2s ease !important;
+}
+
+.navbar__search-input:focus {
+  background-color: var(--ifm-background-color) !important;
+  width: 420px !important;
+  /* Slight grow on focus */
+}
+
+/* Apply hover effects to all primary navbar links */
+.navbar__item.navbar__link {
+  /* Add smooth transition for color changes */
+  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+  border-radius: 6px;
+  /* Optional: adds rounded corners to the highlight */
+  padding: 0.5rem 0.75rem;
+  /* Ensure enough padding for the background highlight */
+}
+
+/* Light Mode Hover Effect: Use the light grey colors */
+.navbar__item.navbar__link:hover {
+  background-color: #e0e0e0 !important;
+  color: #1a1a1a !important;
+  /* Ensure text remains dark */
+}
+
+/* Dark Mode Hover Effect: Use the dark grey colors */
+html[data-theme='dark'] .navbar__item.navbar__link:hover {
+  background-color: #4a4a4a !important;
+  color: #ffffff !important;
+  /* Ensure text remains white */
+}
+
+/* Mobile Responsiveness for Search */
+@media (max-width: 996px) {
+  html[class*='plugin-docs'] .navbar__search {
+    position: relative;
+    left: auto;
+    top: auto;
+    transform: none;
+    width: auto;
+    flex: 1;
+    margin: 0 1rem;
+  }
+}
+
+/* --- Search Highlight Styling --- */
+
+/* Change the background of the selected (hovered/cursor) search result item to grey */
+[class*='suggestion'][class*='cursor'] {
+  background-color: #e0e0e0 !important;
+  /* Light grey background for hover in light mode */
+}
+
+/* Ensure text remains visible/dark on the light grey background when hovered in light mode */
+[class*='suggestion'][class*='cursor'] [class*='hitTitle'],
+[class*='suggestion'][class*='cursor'] [class*='hitContext'] {
+  color: #1a1a1a !important;
+}
+
+/* Dark mode adjustments for hover state */
+html[data-theme='dark'] [class*='suggestion'][class*='cursor'] {
+  background-color: #4a4a4a !important;
+  /* Darker grey background for hover in dark mode */
+}
+
+/* Ensure text remains visible/white on the dark grey background when hovered in dark mode */
+html[data-theme='dark'] [class*='suggestion'][class*='cursor'] [class*='hitTitle'],
+html[data-theme='dark'] [class*='suggestion'][class*='cursor'] [class*='hitContext'] {
+  color: #ffffff !important;
 }

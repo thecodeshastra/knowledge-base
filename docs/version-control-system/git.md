@@ -283,6 +283,8 @@ git push -u origin <branch>                 # Push & set upstream
 git push origin <branch>                    # Push to existing upstream
 git push origin --delete <branch>           # Delete remote branch
 git push origin <branch> -f                 # Force push (DANGEROUS!)
+
+git push --set-upstream origin <branch>     # Set upstream branch (local branch push to remote)
 ```
 
 ### Viewing Changes

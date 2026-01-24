@@ -1,103 +1,92 @@
-# knowledge-base
+# Knowledge Base 🧠
 
-A centralized knowledge base for recording, learning, and sharing technical notes.
-
----
-
-## Purpose
-
-This repository is the **single source of truth** for my technical notes.
-
-The goal is simple:
-
-* Capture what I learn
-* Organize it clearly
-* Share it as readable documentation
-
-Tools and automation exist **only to support the notes**, not the other way around.
+A living technical knowledge base for recording, learning, and sharing engineering insights.
 
 ---
 
-## What This Repo Is
+## 🚀 Overview
 
-* A long-term store of technical knowledge
-* Notes written in plain Markdown
-* Structured for clarity, reuse, and growth
-* Viewable as a documentation website
+This repository is the **single source of truth** for my technical journey. It captures implementation details, mental models, and debugging logs in a structured, searchable, and shareable format.
 
-This repo is optimized for:
-
-* Learning by writing
-* Revisiting concepts over time
-* Turning personal notes into shareable docs
+[**View the Documentation →**](https://thecodeshastra.github.io/knowledge-base/)
 
 ---
 
-## Repository Structure
+## 🛠 Project Structure
 
-```markdown
+```bash
 knowledge-base/
-├── docs/          # All technical notes (source of truth)
-├── site/          # Documentation site (Docusaurus)
-├── automation/    # Scripts to sync/export notes (e.g., Notion)
-├── README.md
-└── .gitignore
+├── docs/               # Core technical notes (Standard Markdown)
+├── site/               # Docusaurus documentation viewer
+│   ├── src/            # Custom React components & layouts
+│   ├── blog/           # Technical blog posts
+│   └── static/         # Icons, logos, and static assets
+├── docker/             # Containerization configs (Dev & Prod)
+├── .github/            # GitHub Actions (CI/CD workflows)
+├── automation/         # Integration scripts (e.g., Notion)
+├── README.md           # System overview
+└── .gitignore          # Environment-safe rules
 ```
 
-### `docs/`
+### 📂 Directory Breakdown
 
-* Pure Markdown
-* Organized by topic and domain
-* No tool-specific assumptions
-
-### `site/`
-
-* Documentation website built with Docusaurus
-* Renders the notes for browsing and sharing
-* Can be replaced without touching the notes
-
-### `automation/`
-
-* Helper scripts for syncing notes to notion.
-* We can view these notes via this website as well as in notion.
+* **`docs/`**: The heart of the project. Pure Markdown files organized by technical domains (e.g., `linux`, `programming`, `database`).
+* **`site/`**: A Docusaurus-powered viewer that transforms raw notes into a premium documentation experience.
+* **`docker/`**: Simplified environment management for both development and production builds.
+* **`automation/`**: Python-based scripts for syncing notes with external tools like Notion.
 
 ---
 
-## Disclaimer
+## 💻 Tech Stack
 
-These notes reflect my understanding at the time of writing and may contain mistakes, outdated information, or incomplete explanations.
-
-Always verify important details from official documentation or trusted sources
-
-Do not blindly rely on these notes for production or critical decisions
-
-Treat them as learning notes, not absolute truth
-
-If you notice an error or have a better explanation, I’m open to corrections. Please point to the exact location and provide a reliable reference.
+* **Core**: Markdown (Long-term data persistence)
+* **Viewer**: [Docusaurus v3](https://docusaurus.io/) (React, TypeScript)
+* **Styling**: Infima CSS & Vanilla CSS
+* **Deployment**: GitHub Actions & GitHub Pages
+* **Infrastructure**: Docker & Docker Compose
 
 ---
 
-## Writing Philosophy
+## ⚡ Development & Deployment
 
-* Notes should be **clear and simple first**
-* Prefer plain language over jargon
-* Write for future-you, not just present-you
-* Structure matters more than volume
+### Local Development (with Docker)
 
-If something can’t be explained simply, it isn’t understood well enough yet.
+```bash
+docker compose up --build
+```
+
+Access the site at `http://localhost:7890/knowledge-base/`
+
+### Manual Deployment
+
+```bash
+cd site/
+yarn deploy
+```
+
+*Note: Uses SSH by default as configured in `package.json`.*
+
+### Automated Deployment
+
+Pushes to the `main` branch trigger the GitHub Actions workflow, which automatically builds and deploys the site to the `gh-pages` branch.
 
 ---
 
-## Documentation Site
+## 🎯 Philosophy
 
-The notes can be viewed as a documentation website using Docusaurus.
-
-Deployment is handled separately inside the `site/` directory.
-
-The website is a **viewer**, not the source of truth.
+1. **Notes-First**: The value is in the record, not the tool. The content is written to be portable and future-proof.
+2. **Continuous Refinement**: Notes are living documents. They evolve as understanding deepens.
+3. **Clarity over Complexity**: If it can't be explained simply, it isn't understood well enough yet.
+4. **Open to Learning**: This is an honest record of growth—mistakes are corrected, and insights are refined over time.
 
 ---
 
-## License
+## 🛡 Disclaimer
+
+These notes reflect my personal understanding at the time of writing. They may contain errors or outdated information. Always cross-reference with official documentation for production-critical decisions.
+
+---
+
+## 📄 License
 
 [MIT LICENSE](LICENSE)
