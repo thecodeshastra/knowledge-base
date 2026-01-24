@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
     <channel>
         <title>Knowledge Base Blog</title>
-        <link>https://thecodeshastra.github.io/knowledge-base/blog</link>
+        <link>https://thecodeshastra.github.io/blog</link>
         <description>Knowledge Base Blog</description>
         <lastBuildDate>Wed, 21 Jan 2026 17:41:11 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
@@ -10,8 +10,8 @@
         <language>en</language>
         <item>
             <title><![CDATA[Blog Template]]></title>
-            <link>https://thecodeshastra.github.io/knowledge-base/blog/template</link>
-            <guid>https://thecodeshastra.github.io/knowledge-base/blog/template</guid>
+            <link>https://thecodeshastra.github.io/blog/template</link>
+            <guid>https://thecodeshastra.github.io/blog/template</guid>
             <pubDate>Wed, 21 Jan 2026 17:41:11 GMT</pubDate>
             <description><![CDATA[Welcome to the blog. This is a template for future technical posts.]]></description>
             <content:encoded><![CDATA[<p>Welcome to the blog. This is a template for future technical posts.</p>

@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunksite=globalThis.webpackChunksite||[]).push([[8121],{8070(e){e.exports=JSON.parse('{"tags":[{"label":"General","permalink":"/blog/tags/general","description":"General technical discussions.","count":1},{"label":"Technical","permalink":"/blog/tags/technical","description":"Deep dives into specific technologies.","count":1}]}')}}]);
