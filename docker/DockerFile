@@ -1,14 +1,24 @@
 FROM node:20-alpine
 
+# Install git for docusaurus metadata and search plugin
+RUN apk add --no-cache git
+
 WORKDIR /app
 
 # Install dependencies first (better caching)
-COPY package.json yarn.lock* ./
+# Note: we are in the repo root context, site is in site/
+COPY site/package.json site/yarn.lock* ./
 RUN yarn install
 
-# Copy rest of the app
-COPY . .
+# Copy site contents
+COPY site/ .
+# Copy docs contents to a sibling directory of /app
+COPY docs/ ../docs/
+
+# Build the site (generates search index)
+RUN yarn run build
 
 EXPOSE 3000
 
-CMD ["yarn", "run", "start", "--host", "0.0.0.0"]
+# Serve the static site
+CMD ["yarn", "run", "serve", "--host", "0.0.0.0", "--port", "3000"]

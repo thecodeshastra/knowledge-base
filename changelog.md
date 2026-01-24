@@ -9,6 +9,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [1.1.0] - 2026-01-24
+
+### Version 1.1.0 Added, Updated and Fixed
+
+- Updated home page with new header names, highlight colors.
+- Updated readme with latest yarn setup.
+- Updated gitignore to ignore obsidian setup.
+- Updated all docs with yet to update text so all know what all things to be updated.
+- Added search bar in documentation to search anything in docs.
+- Updated github cli documentation.
+- Fixed docker setup to make work with new site updates.
+
+---
+
 ## [1.0.1] - 2026-01-22
 
 ### Version 1.0.1 Fixed
@@ -16,11 +30,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Fixed links in git notes.
 - Added truncate as per CI warning.
 
+---
+
 ## [1.0.0] - 2026-01-22
 
 ### Version 1.0.0 Added
 
 - Added version control system and git notes
+
+---
 
 ## [0.0.0] - 2026-01-21
 

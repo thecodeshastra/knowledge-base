@@ -7,11 +7,11 @@ services:
     env_file:
       - ../.env
     build:
-      context: ../site
-      dockerfile: ../docker/DockerFile
+      context: ../
+      dockerfile: docker/DockerFile
     ports:
       - "${FORNTEND_PORT}:3000"
     volumes:
-      - ../docs:/docs # <-- mapped to /docs to match relative path ../docs from /app/site
+      - ../docs:/docs
     environment:
       - NODE_ENV=${NODE_ENV}
