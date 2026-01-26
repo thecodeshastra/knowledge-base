@@ -1,3 +1,7 @@
+---
+title: GitHub CLI
+---
+
 # GitHub CLI
 
 (Terminal-First GitHub Management)
@@ -144,20 +148,6 @@ gh search prs --author @me --state merged   # Search your merged PRs
 
 ## Production GitHub Workflows
 
-### ⚡ Power Move: Quick Issue Triage (CI Automation)
-
-**Scenario**: Bulk review open issues and assign labels/status.
-
-```bash
-gh issue list --label "needs-review" | while read issue; do
-  gh issue edit $issue --add-label "in-progress" --assignee @me
-done
-```
-
-**Use case**: Automate issue routing in CI/CD pipelines.
-
----
-
 ### 🔀 Engineering Flow: Create PR from Feature Branch
 
 **Scenario**: You've pushed feature branch. Create PR with description template.
@@ -184,18 +174,6 @@ gh pr merge 45 --squash --delete-branch     # Squash merge & cleanup
 
 ---
 
-### 🔍 Power Move: Find & Fix Issues by Label
-
-**Scenario**: Find all "bug" issues, transition them to "in-progress".
-
-```bash
-gh issue list --label bug --state open | head -5
-# Then for each:
-gh issue edit 12 --add-label "in-progress"
-```
-
----
-
 ### 🚀 Automation: Auto-Comment on PRs
 
 **Scenario**: Comment on PR automatically (useful in scripts).
@@ -205,20 +183,6 @@ gh pr comment 45 -b "Deployed to staging at https://staging.example.com"
 ```
 
 **Use case**: CI/CD pipeline auto-comments with deployment URLs.
-
----
-
-### 📊 Infrastructure: Export Issues as JSON
-
-**Scenario**: Extract issues for external tools (analytics, reporting).
-
-```bash
-gh issue list --label feature --state open --json number,title,author,createdAt
-# Returns:
-# [
-#   { "number": 1, "title": "Add auth", "author": {...}, "createdAt": "..." }
-# ]
-```
 
 ---
 
@@ -236,19 +200,6 @@ gh run watch <run-id>                       # Stream output live
 
 ---
 
-### 🎯 Team: Bulk Assign Issues
-
-**Scenario**: Assign all unassigned issues to team member.
-
-```bash
-gh issue list --state open --assignee "" | while read line; do
-  number=$(echo $line | awk '{print $1}')
-  gh issue edit $number --assignee "teammate-username"
-done
-```
-
----
-
 ### 🔐 Security: Manage Repository Secrets
 
 **Scenario**: Set API keys for Actions workflow.
@@ -260,42 +211,6 @@ gh secret list                              # Verify (values hidden)
 ```
 
 **Why**: Centralized secret management without GitHub UI.
-
----
-
-### 📈 Power Move: Create Milestone & Associate Issues
-
-**Scenario**: Track issues against v1.2.0 release.
-
-```bash
-gh issue list --milestone "v1.2.0"          # See all issues for milestone
-gh issue edit 45 --milestone "v1.2.0"       # Assign issue to milestone
-```
-
----
-
-### 🧪 Testing: Checkout Teammate's PR Locally
-
-**Scenario**: Review teammate's code by checking out branch locally.
-
-```bash
-gh pr checkout 45                           # Downloads & checks out PR branch
-git log                                     # See their commits
-# Make changes, push:
-git push
-```
-
----
-
-### 🏷️ Tagging: Create Release Tags
-
-**Scenario**: Tag production release from terminal.
-
-```bash
-gh release create v1.2.3 --title "Version 1.2.3" --notes "Bug fixes and improvements"
-gh release list                             # View all releases
-gh release download v1.2.3                  # Download artifacts
-```
 
 ---
 
@@ -324,20 +239,6 @@ gh release download v1.2.3                  # Download artifacts
 - **Create aliases** for frequently used commands (`gh alias set ...`)
 - **Use branch names** that match PR title for `--fill` auto-detection
 - **Combine with shell scripts** for complex multi-step automation
-
----
-
-## Useful Aliases
-
-Set these for faster workflows:
-
-```bash
-gh alias set prs "pr list -a @me"           # Quick PR list
-gh alias set issues "issue list -a @me"     # Quick issue list
-gh alias set bugs "issue list --label bug"  # All bugs
-gh alias set deploys "run list -w deploy"   # Deployment runs
-gh alias set open "browse"                  # Quick open
-```
 
 ---
 

@@ -1,3 +1,7 @@
+---
+title: Version Control System & Git
+---
+
 # Version Control System & Git
 
 ## Version Control System Fundamentals
