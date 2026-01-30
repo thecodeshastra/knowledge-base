@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-ai_agents/ai_foundation" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.9.2">
+<title data-rh="true">AI Foundations | Knowledge Base</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://thecodeshastra.github.io/knowledge-base/img/logo.png"><meta data-rh="true" name="twitter:image" content="https://thecodeshastra.github.io/knowledge-base/img/logo.png"><meta data-rh="true" property="og:url" content="https://thecodeshastra.github.io/knowledge-base/docs/ai_agents/ai_foundation"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="AI Foundations | Knowledge Base"><meta data-rh="true" name="description" content="Artificial Intelligence (AI)"><meta data-rh="true" property="og:description" content="Artificial Intelligence (AI)"><link data-rh="true" rel="icon" href="/knowledge-base/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://thecodeshastra.github.io/knowledge-base/docs/ai_agents/ai_foundation"><link data-rh="true" rel="alternate" href="https://thecodeshastra.github.io/knowledge-base/docs/ai_agents/ai_foundation" hreflang="en"><link data-rh="true" rel="alternate" href="https://thecodeshastra.github.io/knowledge-base/docs/ai_agents/ai_foundation" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"AI Agent","item":"https://thecodeshastra.github.io/knowledge-base/docs/ai_agents/"},{"@type":"ListItem","position":2,"name":"AI Foundations","item":"https://thecodeshastra.github.io/knowledge-base/docs/ai_agents/ai_foundation"}]}</script><link rel="alternate" type="application/rss+xml" href="/knowledge-base/blog/rss.xml" title="Knowledge Base RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/knowledge-base/blog/atom.xml" title="Knowledge Base Atom Feed"><link rel="stylesheet" href="/knowledge-base/assets/css/styles.7c91c70b.css">
+<script src="/knowledge-base/assets/js/runtime~main.4086fd6d.js" defer="defer"></script>
+<script src="/knowledge-base/assets/js/main.42f7fd22.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"dark"),document.documentElement.setAttribute("data-theme-choice",t||"dark")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><link rel="preload" as="image" href="/knowledge-base/img/logo.png"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/knowledge-base/"><div class="navbar__logo"><img src="/knowledge-base/img/logo.png" alt="Knowledge Base Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/knowledge-base/img/logo.png" alt="Knowledge Base Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">Home</b></a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/knowledge-base/docs/intro">Knowledge Base</a><a class="navbar__item navbar__link" href="/knowledge-base/blog">Blog</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"><div class="navbar__search searchBarContainer_NW3z" dir="ltr"><input placeholder="Search" aria-label="Search" class="navbar__search-input searchInput_YFbd" value=""><div class="loadingRing_RJI3 searchBarLoadingRing_YnHq"><div></div><div></div><div></div><div></div></div></div></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/knowledge-base/docs/intro"><span title="Introduction" class="linkLabel_WmDU">Introduction</span></a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--active" href="/knowledge-base/docs/ai_agents"><span title="AI Agent" class="categoryLinkLabel_W154">AI Agent</span></a><button aria-label="Collapse sidebar category &#x27;AI Agent&#x27;" aria-expanded="true" type="button" class="clean-btn menu__caret"></button></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/knowledge-base/docs/ai_agents/ai_foundation"><span title="AI Foundations" class="linkLabel_WmDU">AI Foundations</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/knowledge-base/docs/ai_agents/custom_gpt"><span title="Custom GPTs" class="linkLabel_WmDU">Custom GPTs</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/knowledge-base/docs/ai_agents/prompt_engineering"><span title="Prompt Engineering" class="linkLabel_WmDU">Prompt Engineering</span></a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/knowledge-base/docs/api_design/api"><span title="api_design" class="categoryLinkLabel_W154">api_design</span></a></div></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/knowledge-base/docs/automation"><span title="Automation" class="linkLabel_WmDU">Automation</span></a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" href="/knowledge-base/docs/config_file_management"><span title="Config Management" class="categoryLinkLabel_W154">Config Management</span></a><button aria-label="Expand sidebar category &#x27;Config Management&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/knowledge-base/docs/containerization/docker"><span title="containerization" class="categoryLinkLabel_W154">containerization</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/knowledge-base/docs/database/dbms"><span title="database" class="categoryLinkLabel_W154">database</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" href="/knowledge-base/docs/documentation"><span title="Documentation" class="categoryLinkLabel_W154">Documentation</span></a><button aria-label="Expand sidebar category &#x27;Documentation&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" href="/knowledge-base/docs/linux"><span title="Linux" class="categoryLinkLabel_W154">Linux</span></a><button aria-label="Expand sidebar category &#x27;Linux&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/knowledge-base/docs/others/access_disk_partition"><span title="others" class="categoryLinkLabel_W154">others</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/knowledge-base/docs/programming/coding_style"><span title="programming" class="categoryLinkLabel_W154">programming</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/knowledge-base/docs/security/api_keys"><span title="security" class="categoryLinkLabel_W154">security</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/knowledge-base/docs/version_control_system/changelog"><span title="version_control_system" class="categoryLinkLabel_W154">version_control_system</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/knowledge-base/docs/virtual_env/python_virtual_env"><span title="virtual_env" class="categoryLinkLabel_W154">virtual_env</span></a></div></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/knowledge-base/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item"><a class="breadcrumbs__link" href="/knowledge-base/docs/ai_agents"><span>AI Agent</span></a></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">AI Foundations</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>AI Foundations</h1></header>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="artificial-intelligence-ai">Artificial Intelligence (AI)<a href="#artificial-intelligence-ai" class="hash-link" aria-label="Direct link to Artificial Intelligence (AI)" title="Direct link to Artificial Intelligence (AI)" translate="no">​</a></h2>
+<ul>
+<li class="">Meaning: Computer systems performing tasks typically requiring human intelligence, teaching computers to &quot;think&quot;.</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="types-of-ai-by-capability-level">Types of AI (by Capability Level)<a href="#types-of-ai-by-capability-level" class="hash-link" aria-label="Direct link to Types of AI (by Capability Level)" title="Direct link to Types of AI (by Capability Level)" translate="no">​</a></h3>
+<ul>
+<li class="">Narrow AI<!-- -->
+<ul>
+<li class="">Meaning: AI excelling at specific, narrow tasks; cannot transfer skills.</li>
+<li class="">Example: Email spam filters, voice assistants like Siri.</li>
+</ul>
+</li>
+<li class="">Artificial General Intelligence (AGI)<!-- -->
+<ul>
+<li class="">Meaning: Theoretical AI that can understand, learn, and apply knowledge across any domain like a human.</li>
+</ul>
+</li>
+<li class="">Artificial Super Intelligence (ASI)<!-- -->
+<ul>
+<li class="">Meaning: Purely theoretical AI that exceeds human intelligence in all domains.</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="main-ai-approaches">Main AI Approaches<a href="#main-ai-approaches" class="hash-link" aria-label="Direct link to Main AI Approaches" title="Direct link to Main AI Approaches" translate="no">​</a></h3>
+<ul>
+<li class="">Discriminative AI<!-- -->
+<ul>
+<li class="">Meaning: Analyzes data to make classifications or predictions.</li>
+<li class="">Example: Identifying &quot;cat&quot; or &quot;dog&quot; in photos.</li>
+</ul>
+</li>
+<li class="">Generative AI<!-- -->
+<ul>
+<li class="">Meaning: Creates new content (text, images, music) based on learned patterns.</li>
+<li class="">Example: Writing new articles after reading many existing ones</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="what-is-nlp-️">What is NLP? 🗣️<a href="#what-is-nlp-️" class="hash-link" aria-label="Direct link to What is NLP? 🗣️" title="Direct link to What is NLP? 🗣️" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Definition:</strong> NLP is the process of asking a computer to understand the words and sentences that humans form to derive comprehension, much like a person does when listening or reading.</li>
+<li class=""><strong>Core Function:</strong> NLP&#x27;s job is to translate between <strong>unstructured text</strong> (what humans naturally say or write) and a <strong>structured representation</strong> that a computer can process.<!-- -->
+<ul>
+<li class=""><strong>Unstructured Text Example:</strong> &quot;add eggs and milk to my shopping list&quot;.</li>
+<li class=""><strong>Structured Example:</strong> A shopping list element with sub-elements for an item like &quot;eggs&quot; and an item like &quot;milk&quot;.</li>
+</ul>
+</li>
+<li class=""><strong>Sub-processes of NLP:</strong>
+<ul>
+<li class=""><strong>Natural Language Understanding (NLU):</strong> Translating from <strong>unstructured</strong> data to <strong>structured</strong> data.</li>
+<li class=""><strong>Natural Language Generation (NLG):</strong> Translating from <strong>structured</strong> data to <strong>unstructured</strong> data.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Common Use Cases for NLP 💡-</strong> NLP has high utility in various AI applications. Examples include:</p>
+<ul>
+<li class=""><strong>Machine Translation:</strong> Requires understanding the overall <strong>context</strong> and structure of a sentence, not just word-for-word translation, to avoid critical errors (e.g., the &quot;spirit is willing, but the flesh is weak&quot; example).</li>
+<li class=""><strong>Virtual Assistants/Chatbots:</strong>
+<ul>
+<li class=""><strong>Virtual Assistants (like Siri/Alexa):</strong> Derive a command to execute from human spoken utterances.</li>
+<li class=""><strong>Chatbots:</strong> Use written language to traverse a decision tree and take an action.</li>
+</ul>
+</li>
+<li class=""><strong>Sentiment Analysis:</strong> Analyzing text (like emails or product reviews) to determine the expressed sentiment (e.g., positive vs. negative, serious vs. sarcastic).</li>
+<li class=""><strong>Spam Detection:</strong> Examining email content for indicators like overused words, poor grammar, or inappropriate claims of urgency to determine if a message is spam.</li>
+</ul>
+<p><strong>Fundamental NLP Tools/Stages 🛠️ -</strong> NLP is not a single algorithm but a &quot;bag of tools&quot; applied to unstructured text.</p>
+<ol>
+<li class=""><strong>Tokenization:</strong> The first stage; it breaks a string of text into smaller chunks called <strong>tokens</strong> (e.g., words) to work with them one at a time.</li>
+<li class=""><strong>Stemming:</strong> Deriving the <strong>word stem</strong> for a token by removing prefixes and suffixes and normalizing the tense (e.g., <em>running</em>, <em>runs</em>, <em>ran</em> all stem to <em>run</em>).<!-- -->
+<ul>
+<li class=""><em>Note:</em> Stemming can fail for certain words (e.g., <em>universal</em> and <em>university</em> do not stem well to <em>universe</em>).</li>
+</ul>
+</li>
+<li class=""><strong>Lemmatization:</strong> A preferred tool for tokens where stemming fails; it learns a token&#x27;s meaning through a <strong>dictionary definition</strong> to derive its <strong>root</strong> or <strong>lemma</strong>.<!-- -->
+<ul>
+<li class=""><em>Example:</em> The lemma of <em>better</em> is <strong>good</strong> (the word it is derived from), while its stem would be <em>bet</em>.</li>
+</ul>
+</li>
+<li class=""><strong>Part of Speech (POS) Tagging:</strong> Identifies the grammatical role of a token (e.g., noun, verb) based on its use within the sentence context.<!-- -->
+<ul>
+<li class=""><em>Example:</em> <em>Make</em> is a <strong>verb</strong> in &quot;I&#x27;m going to make dinner&quot; but a <strong>noun</strong> in &quot;what make is your laptop?&quot;.</li>
+</ul>
+</li>
+<li class=""><strong>Named Entity Recognition (NER):</strong> Identifies if an <strong>entity</strong> (like a person&#x27;s name, location, or organization) is associated with a token.<!-- -->
+<ul>
+<li class=""><em>Examples:</em> The token <em>Arizona</em> has the entity of a U.S. state; <em>Ralph</em> has the entity of a person&#x27;s name.</li>
+</ul>
+</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="machine-learning-ml">Machine Learning (ML)<a href="#machine-learning-ml" class="hash-link" aria-label="Direct link to Machine Learning (ML)" title="Direct link to Machine Learning (ML)" translate="no">​</a></h2>
+<ul>
+<li class="">Meaning: Teaching computers to learn patterns from data without explicit programming, much like learning from examples.</li>
+<li class="">Three Main Types of ML<!-- -->
+<ul>
+<li class="">Supervised Learning<!-- -->
+<ul>
+<li class="">Meaning: Learns from data with known correct answers (like a teacher providing solutions).</li>
+<li class="">Example: AI learns to recognize handwritten numbers from labeled examples.</li>
+</ul>
+</li>
+<li class="">Unsupervised Learning<!-- -->
+<ul>
+<li class="">Meaning: Finds hidden patterns or groupings in data without pre-labeled answers.</li>
+<li class="">Example: Grouping customers by similar purchasing behavior without being told what groups exist.</li>
+</ul>
+</li>
+<li class="">Reinforcement Learning<!-- -->
+<ul>
+<li class="">Meaning: Learns optimal actions through trial and error, based on rewards and penalties.</li>
+<li class="">Example: AI learns to play chess by being rewarded for wins and penalized for losses.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="">Foundation Models<!-- -->
+<ul>
+<li class="">Meaning: Large, general-purpose AI models trained on vast data, adaptable to many specific tasks (efficient, versatile)</li>
+<li class="">Key features: Versatile, efficient, transfer learning, cost effective</li>
+<li class="">How they work: Pre-training, fine-tuning, prompt engineering, few-shot learning</li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="large-language-models-llms">Large Language Models (LLMs)<a href="#large-language-models-llms" class="hash-link" aria-label="Direct link to Large Language Models (LLMs)" title="Direct link to Large Language Models (LLMs)" translate="no">​</a></h2>
+<ul>
+<li class="">Definition: A specific type of AI designed to understand and generate human language.</li>
+<li class="">They are like highly sophisticated predictive text systems that have &quot;read&quot; most of the internet.</li>
+<li class="">How LLMs Work (Simplified)<!-- -->
+<ul>
+<li class="">Training Process:<!-- -->
+<ul>
+<li class="">Data Collection: Massive amounts of text (books, websites, articles) are gathered.</li>
+<li class="">Tokenization: Text is broken into smaller pieces (words/parts of words).</li>
+<li class="">Pattern Learning: Statistical relationships between words and phrases are learned.</li>
+<li class="">Context Understanding: How words relate in context is learned.</li>
+<li class="">Response Generation: New text is generated by predicting likely next words.</li>
+</ul>
+</li>
+<li class="">Generation Process (when prompted):<!-- -->
+<ul>
+<li class="">Input Processing: Prompt is broken into tokens.</li>
+<li class="">Context Analysis: Meaning and context are understood.</li>
+<li class="">Pattern Matching: Relevant patterns from training are found.</li>
+<li class="">Word Prediction: Most likely next words are predicted.</li>
+<li class="">Sequential Generation: Continues predicting word by word.</li>
+<li class="">Output Formation: Predictions combine into coherent responses.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="">Most LLMs undergo a two-phase training process:<!-- -->
+<ul>
+<li class="">Pre-training (on massive datasets to predict the next word)</li>
+<li class="">Fine-tuning (with human feedback for alignment and safety).</li>
+</ul>
+</li>
+<li class="">Key Technical Concepts<!-- -->
+<ul>
+<li class="">Transformer Architecture: An innovation allowing AI to process entire text sequences at once, using an &quot;Attention Mechanism&quot; to focus on relevant input parts, improving context understanding.</li>
+<li class="">Parameters: The &quot;neurons&quot; or connections in the AI&#x27;s &quot;brain&quot; that store learned patterns and relationships. Modern LLMs have billions or trillions of parameters, impacting sophistication.</li>
+<li class="">Context Window: Defines how much text the AI can consider simultaneously, measured in &quot;tokens.&quot; This limits how much conversation the AI can &quot;remember&quot; at one time.</li>
+</ul>
+</li>
+<li class="">Capabilities of Modern LLMs<!-- -->
+<ul>
+<li class="">Language Understanding: Comprehends complex texts, maintains coherent conversations, recognizes nuances (sarcasm, humor), and works multi-lingually.</li>
+<li class="">Language Generation: Creates new content like creative writing (stories, poems), technical writing, code, and structured outputs (tables, lists).</li>
+<li class="">Reasoning and Analysis: Engages in logical thinking, identifies patterns, synthesizes information, and performs critical analysis.</li>
+<li class="">Multimodal Capabilities: Integrates with other AI systems to process images, audio, video, and various document types beyond just text.</li>
+</ul>
+</li>
+<li class="">Real world applications:- Content creation, Analysis and research, programming and technical tasks, education and training, etc.</li>
+<li class="">Important Limitations<!-- -->
+<ul>
+<li class="">Knowledge Boundaries: Knows information only up to its training cutoff date, has static knowledge, and cannot learn from real-time conversations. May have gaps on recent events or specialized topics.</li>
+<li class="">Accuracy Concerns (Hallucination): Can generate false but plausible-sounding information, often sounding confident even when incorrect. Requires fact-checking.</li>
+<li class="">Context Limitations: Finite context window means it can &quot;forget&quot; details from earlier in long conversations, potentially leading to inconsistencies.</li>
+<li class="">Understanding Boundaries: Operates primarily on pattern matching, lacking deep understanding of specialized fields, common sense, emotional intelligence, or cultural nuances. It does not possess consciousness or subjective experience.</li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="the-science-behind-ai-how-it-actually-works">The Science Behind AI: How It Actually Works<a href="#the-science-behind-ai-how-it-actually-works" class="hash-link" aria-label="Direct link to The Science Behind AI: How It Actually Works" title="Direct link to The Science Behind AI: How It Actually Works" translate="no">​</a></h2>
+<ul>
+<li class="">This step explains the basic &quot;brain&quot; and &quot;learning&quot; process that allows AI, especially those smart language models, to do what they do.</li>
+</ul>
+<ol>
+<li class="">The &quot;Brain&quot; of AI: Neural Networks<!-- -->
+<ol>
+<li class="">What they are: Computer systems inspired by how your brain works. They use simple connected &quot;nodes&quot; (like tiny brain cells) to process information.</li>
+<li class="">Imagine: A committee of tiny decision-makers. Each person (neuron) gets information, decides if it&#x27;s important, and passes their thoughts to the next group. The last group makes the final call.</li>
+</ol>
+</li>
+<li class="">&quot;Deep&quot; Learning: More Layers, Smarter Learning<!-- -->
+<ol>
+<li class="">What it is: Just neural networks with many layers. The more layers, the deeper the learning.</li>
+<li class="">Imagine: Learning to recognize a cat:<!-- -->
+<ol>
+<li class=""><strong>First Layer</strong>: Detects basic features (edges, lines)</li>
+<li class=""><strong>Second Layer</strong>: Combines edges to recognize shapes</li>
+<li class=""><strong>Third Layer</strong>: Combines shapes to identify objects parts</li>
+<li class=""><strong>Final Layers</strong>: Recognizes complete objects (car, cat, person)</li>
+</ol>
+</li>
+</ol>
+</li>
+<li class="">How AI Learns (The Training Process) AI learns through a cycle of trial and error:<!-- -->
+<ol>
+<li class="">Forward pass - &quot;Guess&quot;: The AI gets some input (like a picture) and makes a guess.</li>
+<li class="">Error calculation - &quot;Check My Work&quot;: It compares its guess to the correct answer and figures out how wrong it was.</li>
+<li class="">Backward pass (Back-propagation) - &quot;Adjust&quot;: It subtly tweaks its internal connections (the &quot;weights&quot;) to be a tiny bit better next time.</li>
+<li class="">Iteration - &quot;Repeat, Repeat, Repeat&quot;: It does this millions of times with tons of examples, slowly becoming very good at its task.</li>
+</ol>
+</li>
+<li class="">How Language Models (LLMs) are &quot;Taught&quot; LLMs learn in two main stages:<!-- -->
+<ol>
+<li class="">Phase 1: Reading Everything (Pre-training)<!-- -->
+<ol>
+<li class="">The AI reads a huge amount of text (like most of the internet!).</li>
+<li class="">Its main job is to simply guess the next word in a sentence.</li>
+<li class="">By doing this over and over, it secretly learns grammar, facts, and how to reason. This takes weeks or months.</li>
+</ol>
+</li>
+<li class="">Phase 2: Learning Manners (Fine-tuning)<!-- -->
+<ol>
+<li class="">After &quot;reading everything,&quot; humans give it feedback: &quot;This answer was good,&quot; &quot;This one was bad&quot;.</li>
+<li class="">The AI uses this feedback to learn to give responses that humans prefer and to avoid harmful or biased content.</li>
+</ol>
+</li>
+</ol>
+</li>
+<li class="">The &quot;Magic&quot; Behind Understanding Context: Transformers<!-- -->
+<ol>
+<li class="">Key Idea: Self-Attention<!-- -->
+<ol>
+<li class="">Older AI read words one by one, like you reading a book sentence by sentence.</li>
+<li class="">Transformers (the current smart design) are different. They look at all the words in a sentence at once, like reading the whole sentence and instantly seeing how all the words connect.</li>
+<li class="">Why it&#x27;s great: This lets the AI understand phrases like &quot;The cat sat on the mat because it was tired.&quot; The &quot;attention&quot; mechanism helps it know &quot;it&quot; refers to the &quot;cat,&quot; not the &quot;mat&quot;.</li>
+</ol>
+</li>
+</ol>
+</li>
+<li class="">The &quot;Power&quot; Needed (Computational Requirements)<!-- -->
+<ol>
+<li class="">Training: Teaching these massive AI models takes huge amounts of computer power (like thousands of powerful graphics cards working for months) and tons of electricity. It can cost millions of dollars.</li>
+<li class="">Using it: When you ask the AI a question, it still needs significant computer power, but much less than training</li>
+</ol>
+</li>
+<li class="">Why AI Seems So Smart<!-- -->
+<ol>
+<li class="">Super-Scale Pattern Recognition: It has read and processed more information than any human ever could. It finds complex patterns that we would miss.</li>
+<li class="">Smart Guessing: It&#x27;s constantly predicting the most likely next word or action based on all that training data.</li>
+<li class="">Surprise Abilities: Sometimes, when models get very big, they suddenly gain unexpected skills, like being able to write code or do math, even if they weren&#x27;t specifically taught to.</li>
+</ol>
+</li>
+<li class="">Limitations of current AI:<!-- -->
+<ol>
+<li class="">No true understanding - Symbol manipulations, pattern matching, lack of consciousness</li>
+<li class="">Training data dependencies - Bias inheritance, knowledge gaps, temporal boundaries</li>
+<li class="">Computational constraints - Context limits, resource requirements, efficiency</li>
+</ol>
+</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="ai-tools-and-platform-categories"><strong>AI Tools and Platform Categories</strong><a href="#ai-tools-and-platform-categories" class="hash-link" aria-label="Direct link to ai-tools-and-platform-categories" title="Direct link to ai-tools-and-platform-categories" translate="no">​</a></h2>
+<p>The goal of this module is to shift focus from <em>how</em> to prompt to <em>what</em> tools are available, recognizing that the ecosystem changes rapidly, so expertise should focus on categories rather than specific products.</p>
+<p>The learning here involves understanding the functional <strong>categories</strong> of AI tools and establishing a <strong>framework</strong> for tool selection. This ensures that as a prompt engineer, you can effectively match the task requirements to the most suitable technological platform.</p>
+<ul>
+<li class=""><strong>Understanding Core AI Platform Categories:</strong> You must be able to categorize platforms based on their function.<!-- -->
+<ul>
+<li class=""><strong>General-Purpose Conversational AI:</strong> These are multi-functional AI assistants used for varied tasks like text generation, editing, analysis, and brainstorming. Criteria for evaluating them include model quality, context window size, multimodal support, and cost structure.</li>
+<li class=""><strong>Specialized Domain AI:</strong> These are optimized for specific industries (e.g., Legal AI, Healthcare AI, Code Generation AI) and should be chosen when deep expertise is required.</li>
+<li class=""><strong>AI Development Platforms:</strong> These are for technical users (developers) who need to build custom AI applications and manage workflow orchestration.</li>
+<li class=""><strong>No-Code AI Tools:</strong> These provide AI capabilities to non-technical users via visual workflow builders and pre-built templates, requiring no programming skills.</li>
+</ul>
+</li>
+<li class=""><strong>The AI Tool Selection Framework:</strong> You need to know how to evaluate tools systematically.<!-- -->
+<ul>
+<li class=""><strong>Performance Factors:</strong> Assess accuracy, consistency, speed, and context understanding.</li>
+<li class=""><strong>Practical Factors:</strong> Consider ease of use, cost structure, reliability, and support.</li>
+<li class=""><strong>Strategic Factors:</strong> Evaluate scalability, integration with existing workflows, future-proofing, and data privacy policies.</li>
+</ul>
+</li>
+<li class=""><strong>Local and Open-Source AI:</strong> You must understand the trade-offs of using models locally.<!-- -->
+<ul>
+<li class=""><strong>Benefits:</strong> Increased privacy (data never leaves the system), cost savings (no ongoing usage fees), and full customization.</li>
+<li class=""><strong>Considerations:</strong> Requires powerful hardware, more complex technical setup, and model quality may not match state-of-the-art cloud models.</li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="common-challenges-and-solutions"><strong>Common Challenges and Solutions</strong><a href="#common-challenges-and-solutions" class="hash-link" aria-label="Direct link to common-challenges-and-solutions" title="Direct link to common-challenges-and-solutions" translate="no">​</a></h2>
+<p>This module prepares you to troubleshoot issues that inevitably arise when applying prompt engineering at scale or in complex workflows.</p>
+<p>This step uses a <strong>Symptom-Cause-Solution</strong> format to structure problem-solving, teaching you systematic refinement rather than trial-and-error.</p>
+<ul>
+<li class=""><strong>Handling Inconsistent or Poor-Quality Outputs:</strong>
+<ul>
+<li class=""><strong>Challenge:</strong> Responses are too vague, inconsistent, or don&#x27;t meet requirements.</li>
+<li class=""><strong>Solution:</strong> <strong>Implement Prompt Standardization</strong> (using clear templates) and <strong>Quality Gates</strong> (defined criteria for acceptance).</li>
+</ul>
+</li>
+<li class=""><strong>Mitigating Information Accuracy and Hallucination:</strong>
+<ul>
+<li class=""><strong>Challenge:</strong> AI generates false but plausible-sounding information because it is predicting the most likely words, not accessing verified facts.</li>
+<li class=""><strong>Solution:</strong> Use <strong>Source-Grounded Approaches</strong> (like Retrieval-Augmented Generation, or RAG) to ensure the AI bases its answers on verifiable external data. Also, implement <strong>Fact-Checking Workflows</strong>.</li>
+</ul>
+</li>
+<li class=""><strong>Managing Context and Memory Limitations:</strong>
+<ul>
+<li class=""><strong>Challenge:</strong> The AI forgets details from earlier in the conversation because it has a finite context window.</li>
+<li class=""><strong>Solution:</strong> Use <strong>Context Management Strategies</strong>, such as summarizing previous conversation segments or using <strong>Structured Context Passing</strong> where key information is included in every prompt.</li>
+</ul>
+</li>
+<li class=""><strong>Optimizing Costs and Efficiency:</strong>
+<ul>
+<li class=""><strong>Challenge:</strong> High usage costs or time spent crafting complex prompts.</li>
+<li class=""><strong>Solution:</strong> Practice <strong>Task-Model Matching</strong> (using smaller, less expensive models for simpler tasks) and focus on <strong>Prompt Efficiency</strong> (removing unnecessary words to save on token usage).</li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="ai-safety-and-ethics"><strong>AI Safety and Ethics</strong><a href="#ai-safety-and-ethics" class="hash-link" aria-label="Direct link to ai-safety-and-ethics" title="Direct link to ai-safety-and-ethics" translate="no">​</a></h2>
+<p>This module emphasizes responsible AI usage, preparing you to handle ethical risks, biases, and regulatory requirements.</p>
+<p>The content is framed around four core ethical principles and practical strategies for risk mitigation, focusing on the responsible deployment of AI outputs.</p>
+<ul>
+<li class=""><strong>Core Ethical Principles (The Four Principles):</strong>
+<ul>
+<li class=""><strong>Beneficence:</strong> Use AI to create positive outcomes and benefits for society.</li>
+<li class=""><strong>Non-Maleficence:</strong> Ensure AI usage avoids causing harm, such as spreading misinformation or amplifying bias.</li>
+<li class=""><strong>Autonomy:</strong> Maintain human control; AI should enhance human decision-making and be transparent about its role.</li>
+<li class=""><strong>Justice and Fairness:</strong> AI applications must be equitable and non-discriminatory.</li>
+</ul>
+</li>
+<li class=""><strong>Understanding and Addressing Bias:</strong>
+<ul>
+<li class="">You must recognize sources of bias, including <strong>Training Data Bias</strong> (AI learns past discrimination) and <strong>Algorithmic Bias</strong> (design choices that favor certain outcomes).</li>
+<li class="">A <strong>Bias-Aware Prompting Framework</strong> should be used to actively mitigate unfair outputs.</li>
+</ul>
+</li>
+<li class=""><strong>Privacy and Data Protection:</strong>
+<ul>
+<li class="">You must know which data is sensitive (e.g., health, financial, confidential business information) and <strong>never share regulated data</strong> (e.g., subject to GDPR, HIPAA).</li>
+<li class="">Use <strong>Privacy-Protecting Prompting Strategies</strong>, such as data anonymization or hypothetical framing, when handling sensitive topics.</li>
+</ul>
+</li>
+<li class=""><strong>Avoiding Misuse and Ensuring Compliance:</strong>
+<ul>
+<li class="">Be aware of deceptive practices (e.g., generating fake testimonials, impersonating humans).</li>
+<li class="">You must understand the need to adhere to relevant <strong>Regulatory Compliance</strong> guidelines, such as data protection laws and industry-specific regulations.</li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="choosing-the-right-ai-approach"><strong>Choosing the Right AI Approach</strong><a href="#choosing-the-right-ai-approach" class="hash-link" aria-label="Direct link to choosing-the-right-ai-approach" title="Direct link to choosing-the-right-ai-approach" translate="no">​</a></h2>
+<p>This module is the capstone of your prompt engineering strategy, teaching you how to decide when basic prompting is enough, and when you need to escalate to more complex, costly, and resource-intensive methods.</p>
+<p>This step provides a <strong>Decision Framework</strong> based on <strong>Task Analysis</strong>, <strong>Resource Assessment</strong>, and a comparison of the three main customization approaches, culminating in a <strong>Progressive Implementation Strategy</strong>.</p>
+<ul>
+<li class=""><strong>The Three Main Approaches and Their Trade-offs:</strong> You must know how Prompt Engineering stacks up against alternatives.<!-- -->
+<ul>
+<li class=""><strong>Prompt Engineering:</strong> <strong>Immediate speed</strong>, <strong>low cost</strong>, and <strong>high flexibility</strong>. It is ideal for prototypes and varied tasks.</li>
+<li class=""><strong>Fine-Tuning:</strong> High cost and low flexibility but achieves high-volume, consistent performance for specialized domains. Requires technical expertise.</li>
+<li class=""><strong>AI Agents:</strong> Very high cost and highly complex, reserved for autonomous systems that plan and execute ongoing processes.</li>
+</ul>
+</li>
+<li class=""><strong>The Crucial Hybrid Approach (RAG):</strong>
+<ul>
+<li class=""><strong>RAG (Retrieval-Augmented Generation)</strong> is the middle ground.</li>
+<li class="">It is used when you need <strong>current, specific information</strong> that was not in the model’s training data.</li>
+<li class=""><strong>RAG Benefits:</strong> It is more accurate than pure prompting but less expensive than fine-tuning, and its knowledge base can be updated without retraining the core model.</li>
+</ul>
+</li>
+<li class=""><strong>Strategic Implementation (Progressive Strategy):</strong>
+<ul>
+<li class="">Always start with <strong>Prompt Engineering</strong> to establish the foundation.</li>
+<li class="">Only scale up to <strong>Optimization and RAG Integration</strong> if you need current data or higher accuracy.</li>
+<li class="">Reserve <strong>Selective Fine-Tuning</strong> and <strong>Agent Development</strong> for high-volume, highly complex tasks where the cost is justified.</li>
+</ul>
+</li>
+<li class=""><strong>Success Factor:</strong> The key to success is using the <strong>simplest approach</strong> that meets your needs and only scaling to more sophisticated methods (like fine-tuning) when results and requirements justify the investment.</li>
+</ul></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col noPrint_WFHX"><a href="https://github.com/thecodeshastra/knowledge-base/tree/main/site/../docs/ai_agents/ai_foundation.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/knowledge-base/docs/ai_agents"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">AI Agent</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/knowledge-base/docs/ai_agents/custom_gpt"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Custom GPTs</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#artificial-intelligence-ai" class="table-of-contents__link toc-highlight">Artificial Intelligence (AI)</a><ul><li><a href="#types-of-ai-by-capability-level" class="table-of-contents__link toc-highlight">Types of AI (by Capability Level)</a></li><li><a href="#main-ai-approaches" class="table-of-contents__link toc-highlight">Main AI Approaches</a></li><li><a href="#what-is-nlp-️" class="table-of-contents__link toc-highlight">What is NLP? 🗣️</a></li></ul></li><li><a href="#machine-learning-ml" class="table-of-contents__link toc-highlight">Machine Learning (ML)</a></li><li><a href="#large-language-models-llms" class="table-of-contents__link toc-highlight">Large Language Models (LLMs)</a></li><li><a href="#the-science-behind-ai-how-it-actually-works" class="table-of-contents__link toc-highlight">The Science Behind AI: How It Actually Works</a></li><li><a href="#ai-tools-and-platform-categories" class="table-of-contents__link toc-highlight"><strong>AI Tools and Platform Categories</strong></a></li><li><a href="#common-challenges-and-solutions" class="table-of-contents__link toc-highlight"><strong>Common Challenges and Solutions</strong></a></li><li><a href="#ai-safety-and-ethics" class="table-of-contents__link toc-highlight"><strong>AI Safety and Ethics</strong></a></li><li><a href="#choosing-the-right-ai-approach" class="table-of-contents__link toc-highlight"><strong>Choosing the Right AI Approach</strong></a></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Docs</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/knowledge-base/docs/intro">Knowledge Base</a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">More</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/knowledge-base/blog">Blog</a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Community</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://www.linkedin.com/in/thecodeshastra/" target="_blank" rel="noopener noreferrer" class="footer__link-item">Linkedin<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://github.com/thecodeshastra" target="_blank" rel="noopener noreferrer" class="footer__link-item">Github<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 Mahendra Pawar | Sattvic-Yantra, Built with Docusaurus.</div></div></div></footer></div>
+</body>
+</html>
