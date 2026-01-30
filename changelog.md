@@ -9,6 +9,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [1.3.0] - 2026-01-30
+
+### Version 1.3.0 Added
+
+- Resolves [tcs-25] Added AI foundation, AI agents, prompt engineering and custom gpt notes.
+- We will maintain all AI related notes under AI_agents dir.
+
+---
+
 ## [1.2.0] - 2026-01-27
 
 ### Version 1.2.0 Added
