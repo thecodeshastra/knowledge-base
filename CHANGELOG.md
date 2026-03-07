@@ -9,6 +9,29 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [1.4.0] - 2026-03-07
+
+### Added
+
+- Created comprehensive DevOps documentation in `docs/devops/index.md` covering philosophy (CAMS), lifecycle, and tools.
+- Added diagramming notes in `docs/others/diagramming.md`.
+- Added Python virtual environment and packaging notes in `docs/virtual_env/pyproject.md`.
+
+### Changed
+
+- Reorganized documentation structure by moving/consolidating Linux and Bash notes into `docs/devops/`.
+- Updated Docusaurus configuration to remove `cheatsheets` directory and associated sidebars, navbar items, and footer links.
+- Updated `docker/DockerFile` to remove `cheatsheets` copy instruction.
+- Updated `.gitignore` to reflect current project state.
+- Updated Git workflow documentation in `docs/version_control_system/git_workflow.md`.
+
+### Removed
+
+- Deleted the `cheatsheets/` directory and all standalone cheatsheet files.
+- Removed obsolete documentation files in `docs/api_design/`, `docs/database/`, and `docs/linux/` as part of structural cleanup.
+
+---
+
 ## [1.3.0] - 2026-01-30
 
 ### Version 1.3.0 Added
