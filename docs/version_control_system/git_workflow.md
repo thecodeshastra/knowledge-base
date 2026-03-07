@@ -428,15 +428,15 @@ Developer fixes and commits again
 
 ## TBD vs GitFlow vs GitHub Flow (Comparison)
 
-| Aspect | GitFlow | GitHub Flow | TBD |
-| -------- | --------- | ------------- | ----- |
-| **Branch strategy** | Multiple long-lived | main + feature PRs | main + feature flags |
-| **Deployment speed** | Slow (weeks) | Medium (days) | Fast (hours/minutes) |
-| **Merge conflicts** | High (branches diverge) | Medium | Minimal (constant integration) |
-| **Testing required** | Basic | Good | Excellent |
-| **Team maturity** | Structured (large teams) | Medium experience | Senior/experienced |
-| **Best for** | Desktop/mobile, versioned | SaaS, web apps | High-velocity SaaS |
-| **Complexity** | HIGH | MEDIUM | LOW (but disciplined) |
-| **Feature availability** | Releases per month | Releases per week | Releases per day |
+| Aspect                   | GitFlow                   | GitHub Flow        | TBD                            |
+| ------------------------ | ------------------------- | ------------------ | ------------------------------ |
+| **Branch strategy**      | Multiple long-lived       | main + feature PRs | main + feature flags           |
+| **Deployment speed**     | Slow (weeks)              | Medium (days)      | Fast (hours/minutes)           |
+| **Merge conflicts**      | High (branches diverge)   | Medium             | Minimal (constant integration) |
+| **Testing required**     | Basic                     | Good               | Excellent                      |
+| **Team maturity**        | Structured (large teams)  | Medium experience  | Senior/experienced             |
+| **Best for**             | Desktop/mobile, versioned | SaaS, web apps     | High-velocity SaaS             |
+| **Complexity**           | HIGH                      | MEDIUM             | LOW (but disciplined)          |
+| **Feature availability** | Releases per month        | Releases per week  | Releases per day               |
 
 ---

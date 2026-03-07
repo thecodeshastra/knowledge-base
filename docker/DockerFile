@@ -12,7 +12,7 @@ RUN yarn install
 
 # Copy site contents
 COPY site/ .
-# Copy docs contents to a sibling directory of /app
+# Copy docs and cheatsheets contents to a sibling directory of /app
 COPY docs/ ../docs/
 
 # Build the site (generates search index)
