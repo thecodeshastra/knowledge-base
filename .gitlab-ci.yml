@@ -1,0 +1,89 @@
+# # ---------------------------------------------------------------------------
+# # GitLab CI/CD – Deploy Docusaurus knowledge-base to GitLab Pages
+# #
+# # GitLab Pages conventions (mandatory):
+# #   • The deploying job MUST be named `pages`.
+# #   • Built assets MUST be placed in a `public/` directory at the repo root.
+# #   • The artifact path MUST be `public`.
+# #
+# # Resulting Pages URL:
+# #   https://<namespace>.gitlab.io/<project-name>/
+# #
+# # If you use a custom domain or a self-hosted GitLab instance, update the
+# # `url` and `baseUrl` values in site/docusaurus.config.ts accordingly.
+# # ---------------------------------------------------------------------------
+
+# default:
+#   image: node:20-alpine
+
+# # Only run the pipeline on pushes to `main` that touch relevant paths.
+# workflow:
+#   rules:
+#     - if: '$CI_COMMIT_BRANCH == "main"'
+#       changes:
+#         - site/**/*
+#         - docs/**/*
+#         - .gitlab-ci.yml
+#     - when: never
+
+# # ---------------------------------------------------------------------------
+# # Stage definitions
+# # ---------------------------------------------------------------------------
+# stages:
+#   - build
+#   - deploy
+
+# # ---------------------------------------------------------------------------
+# # Cache – reuse node_modules across pipeline runs to speed up installs.
+# # The cache key is tied to the yarn.lock so it is invalidated on dep changes.
+# # ---------------------------------------------------------------------------
+# .yarn_cache: &yarn_cache
+#   cache:
+#     key:
+#       files:
+#         - site/yarn.lock
+#     paths:
+#       - site/node_modules/
+#     policy: pull-push
+
+# # ---------------------------------------------------------------------------
+# # Build job
+# # ---------------------------------------------------------------------------
+# build:
+#   stage: build
+#   <<: *yarn_cache
+#   before_script:
+#     # git is required by some Docusaurus metadata plugins
+#     - apk add --no-cache git
+#     - cd site
+#     - yarn install --frozen-lockfile
+#   script:
+#     - yarn build
+#   artifacts:
+#     # Pass the built output to the `pages` job in the next stage.
+#     paths:
+#       - site/build/
+#     expire_in: 1 hour
+
+# # ---------------------------------------------------------------------------
+# # Pages job (name is mandatory – GitLab recognises "pages" as the Pages job)
+# # ---------------------------------------------------------------------------
+# pages:
+#   stage: deploy
+#   # No Node needed for this job – just move files into `public/`.
+#   image: alpine:3.19
+#   dependencies:
+#     - build
+#   script:
+#     # GitLab Pages serves from `public/` at the repo root.
+#     - mv site/build public
+#   artifacts:
+#     paths:
+#       - public
+#     # GitLab Pages artifacts must be kept for at least the deployment lifetime.
+#     expire_in: never
+#   environment:
+#     name: gitlab-pages
+#     url: https://$CI_PROJECT_NAMESPACE.gitlab.io/$CI_PROJECT_NAME
+#   only:
+#     - main
