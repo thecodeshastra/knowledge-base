@@ -5,7 +5,6 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import Layout from '@theme/Layout';
 import Heading from '@theme/Heading';
-
 import styles from './index.module.css';
 
 function HeroSection() {
@@ -25,9 +24,7 @@ function HeroSection() {
         </Heading>
         <p className="hero__subtitle">{siteConfig.tagline}</p>
         <div className={styles.buttons}>
-          <Link
-            className="button button--primary button--lg"
-            to="/docs/intro">
+          <Link className="button button--primary button--lg" to="/docs/intro">
             Start Reading
           </Link>
         </div>
@@ -50,12 +47,20 @@ function Feature({ title, desc }: { title: string; desc: string }) {
 function MainContent() {
   return (
     <div className="container margin-vert--xl">
+      {/* ⚠️ Warning Banner Block */}
+      <section className="row margin-bottom--xl">
+        <div className="col col--8 col--offset-2">
+          <div className="alert alert--warning" role="alert" style={{ textAlign: 'left' }}>
+            <span>⚠️ <strong>Notice:</strong> This project is just made for practice and now further updates are stopped.</span>
+          </div>
+        </div>
+      </section>
+
       <section className="row">
         <div className="col col--8 col--offset-2 text--center margin-bottom--xl">
           <Heading as="h2" className="margin-bottom--md">A Living Repository of Technical Wisdom</Heading>
           <p className="text--lg">
-            This Knowledge Base is a centralized system for capturing implementation details,
-            organizing complex mental models, and sharing refined documentation.
+            This Knowledge Base is a centralized system for capturing implementation details, organizing complex mental models, and sharing refined documentation.
           </p>
         </div>
       </section>
@@ -64,22 +69,10 @@ function MainContent() {
         <div className="col col--10 col--offset-1">
           <Heading as="h2" className="margin-bottom--lg text--center">Areas of Focus</Heading>
           <div className="row">
-            <Feature
-              title="Fundamentals & Systems"
-              desc="Deep dives into Linux internals, Bash scripting, and System Design principles."
-            />
-            <Feature
-              title="Engineering & Development"
-              desc="Mastering programming languages, API design, and software architecture patterns."
-            />
-            <Feature
-              title="Data & Persistence"
-              desc="SQL mastery, database optimization, and modern data modeling techniques."
-            />
-            <Feature
-              title="Operations & Deployment"
-              desc="Containerization with Docker, CI/CD automation, and infrastructure as code."
-            />
+            <Feature title="Fundamentals & Systems" desc="Deep dives into Linux internals, Bash scripting, and System Design principles." />
+            <Feature title="Engineering & Development" desc="Mastering programming languages, API design, and software architecture patterns." />
+            <Feature title="Data & Persistence" desc="SQL mastery, database optimization, and modern data modeling techniques." />
+            <Feature title="Operations & Deployment" desc="Containerization with Docker, CI/CD automation, and infrastructure as code." />
           </div>
         </div>
       </section>
@@ -104,9 +97,7 @@ function MainContent() {
 export default function Home(): ReactNode {
   const { siteConfig } = useDocusaurusContext();
   return (
-    <Layout
-      title="Knowledge Base | Home"
-      description={siteConfig.tagline}>
+    <Layout title="Knowledge Base | Home" description={siteConfig.tagline}>
       <HeroSection />
       <main>
         <MainContent />
